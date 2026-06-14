@@ -296,6 +296,96 @@
 
   /* ---------- Analytics ---------- */
   #analyticsView{display:none;max-width:1180px;margin:0 auto;padding:30px 22px 70px}
+
+  /* ---------- Star ratings (shared) ---------- */
+  .stars{display:inline-flex;gap:1px;color:#d9c9a8;font-size:1rem;line-height:1}
+  .stars.sm{font-size:.82rem}
+  .stars .star.on{color:#e0a93f}
+  .card-rating{display:flex;align-items:center;gap:6px;margin:2px 0 6px}
+  .card-rev-count{font-size:.76rem;color:var(--ink-soft)}
+  .img-count{position:absolute;bottom:10px;right:10px;background:rgba(28,23,20,.7);color:#fff;
+    font-size:.72rem;padding:3px 8px;border-radius:20px;z-index:2}
+
+  /* ---------- Admin form image thumbnails ---------- */
+  .img-thumbs{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .img-thumb{position:relative;width:74px;height:74px;border-radius:10px;overflow:hidden;
+    border:1px solid var(--line);background:var(--card)}
+  .img-thumb.is-primary{border-color:var(--gold);box-shadow:0 0 0 2px rgba(176,141,79,.25)}
+  .img-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .img-thumb-badge{position:absolute;bottom:0;left:0;right:0;background:var(--gold-deep);color:#fff;
+    font-size:.62rem;text-align:center;padding:2px;font-weight:600}
+  .img-thumb-del{position:absolute;top:2px;right:2px;width:20px;height:20px;border-radius:50%;
+    background:rgba(28,23,20,.78);color:#fff;font-size:.95rem;line-height:1;display:grid;place-items:center;cursor:pointer;border:none}
+  .img-thumb-make{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;
+    background:rgba(255,255,255,.9);color:#caa14a;font-size:.8rem;line-height:1;display:grid;place-items:center;cursor:pointer;border:none}
+
+  /* ---------- Product detail view ---------- */
+  #productView{display:none;max-width:1100px;margin:0 auto;padding:28px 22px 70px}
+  .pd-back{background:none;border:none;color:var(--gold-deep);font-weight:600;font-size:.9rem;
+    cursor:pointer;padding:6px 0;margin-bottom:14px}
+  .pd-back:hover{color:var(--ink)}
+  .pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+  .pd-main-img{position:relative;border-radius:16px;overflow:hidden;background:var(--card);
+    border:1px solid var(--line);aspect-ratio:1/1}
+  .pd-main-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .pd-main-img .tag{position:absolute;top:14px;left:14px;background:var(--ink);color:#fff;
+    font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px}
+  .pd-thumbs{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .pd-thumb{width:70px;height:70px;border-radius:10px;overflow:hidden;border:1px solid var(--line);
+    cursor:pointer;padding:0;background:none;transition:.15s}
+  .pd-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .pd-thumb.active{border-color:var(--gold);box-shadow:0 0 0 2px rgba(176,141,79,.3)}
+  .pd-cat{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .pd-name{font-family:"Fraunces",serif;font-size:2rem;font-weight:600;margin:8px 0 10px;line-height:1.1}
+  .pd-rating-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:.88rem}
+  .pd-rating-num{font-weight:600;color:var(--ink)}
+  .pd-rev-link{color:var(--ink-soft)}
+  .pd-price{font-family:"Fraunces",serif;font-size:1.7rem;font-weight:600;color:var(--ink);margin-bottom:16px}
+  .pd-price small{font-size:1rem;color:var(--ink-soft);text-decoration:line-through;margin-right:10px;font-family:"Hanken Grotesk",sans-serif}
+  .pd-desc{color:var(--ink-soft);line-height:1.7;margin-bottom:18px}
+  .pd-stock{display:inline-block;font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:20px;margin-bottom:18px}
+  .pd-stock.ok{background:#eef6ee;color:#3a6a3a}
+  .pd-stock.low{background:#fbf4e6;color:var(--gold-deep)}
+  .pd-stock.out{background:#fbeeec;color:#a14b46}
+  .pd-actions{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .pd-add{background:var(--ink);color:#fff;border:none;border-radius:30px;padding:14px 32px;
+    font-size:.95rem;font-weight:600;cursor:pointer;transition:.2s}
+  .pd-add:hover:not(.disabled){background:var(--gold-deep)}
+  .pd-add.disabled{background:var(--line);color:var(--ink-soft);cursor:not-allowed}
+  .pd-incart{font-size:.85rem;color:var(--sage);font-weight:600}
+  .pd-meta{font-size:.82rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px}
+  /* Reviews */
+  .pd-reviews{margin-top:48px;border-top:1px solid var(--line);padding-top:30px}
+  .pd-sec-title{font-family:"Fraunces",serif;font-size:1.5rem;margin-bottom:18px}
+  .pd-sec-title span{color:var(--ink-soft);font-weight:400}
+  .pd-review-summary{margin-bottom:20px}
+  .pd-avg{display:inline-flex;flex-direction:column;align-items:center;gap:4px;background:var(--card);
+    border:1px solid var(--line);border-radius:14px;padding:16px 30px}
+  .pd-avg-num{font-family:"Fraunces",serif;font-size:2.2rem;font-weight:600;line-height:1}
+  .pd-avg-count{font-size:.8rem;color:var(--ink-soft)}
+  .pd-review-list{display:flex;flex-direction:column;gap:14px;margin-bottom:30px}
+  .pd-review{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .pd-review-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .pd-review-name{font-weight:600;color:var(--ink)}
+  .pd-review-text{color:var(--ink-soft);line-height:1.6;margin-top:7px;font-size:.92rem}
+  .pd-review-date{font-size:.75rem;color:var(--ink-soft);margin-top:7px}
+  .pd-no-reviews{color:var(--ink-soft);font-style:italic;padding:6px 0 14px}
+  .pd-review-form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;max-width:560px}
+  .pd-review-form h3{font-family:"Fraunces",serif;font-size:1.2rem;margin-bottom:12px}
+  .pd-review-form label{display:block;font-size:.8rem;color:var(--ink-soft);margin:12px 0 5px}
+  .pd-review-form input,.pd-review-form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);
+    border-radius:10px;font-family:inherit;font-size:.92rem;color:var(--ink);background:var(--bg)}
+  .pd-review-form input:focus,.pd-review-form textarea:focus{outline:none;border-color:var(--gold)}
+  .pd-star-input{display:flex;gap:4px;font-size:1.7rem;color:#d9c9a8;cursor:pointer}
+  .pd-star-input .star-pick{transition:color .1s}
+  .pd-star-input .star-pick.on{color:#e0a93f}
+  .pd-submit{margin-top:16px;background:var(--gold-deep);color:#fff;border:none;border-radius:10px;
+    padding:12px 24px;font-size:.9rem;font-weight:600;cursor:pointer;transition:.2s}
+  .pd-submit:hover{background:var(--ink)}
+  @media(max-width:820px){
+    .pd-grid{grid-template-columns:1fr;gap:24px}
+    .pd-name{font-size:1.6rem}
+  }
   .an-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:18px;margin-top:18px}
   .an-donut-wrap{display:flex;align-items:center;gap:22px;margin:18px 0 10px;flex-wrap:wrap}
   .an-legend{display:flex;flex-direction:column;gap:8px;flex:1;min-width:150px}
@@ -595,18 +685,21 @@
       </div>
       <div style="flex:1"><label>In stock (qty)</label><input id="fStock" type="number" placeholder="0"></div>
 
-      <label>Product image</label>
+      <label>Product images</label>
       <div class="img-upload" id="imgDrop" onclick="$('fFile').click()">
-        <input type="file" id="fFile" accept="image/png,image/jpeg,image/webp" style="display:none" onchange="handleImageFile(this.files[0])">
-        <img id="imgPreview" class="img-preview" style="display:none" alt="preview">
-        <div id="imgPlaceholder" class="img-ph">
+        <input type="file" id="fFile" accept="image/png,image/jpeg,image/webp" multiple style="display:none" onchange="handleImageFiles(this.files)">
+        <div class="img-ph">
           <div style="font-size:1.6rem">⬆️</div>
-          <div style="font-weight:600;margin-top:4px">Click to upload from your device</div>
-          <div class="hint" style="margin-top:4px">Recommended: square image, <b>800 × 800 px</b> (JPG, PNG or WebP, under 2 MB)</div>
+          <div style="font-weight:600;margin-top:4px">Click to upload one or more images</div>
+          <div class="hint" style="margin-top:4px">Recommended: square, <b>800 × 800 px</b> (JPG, PNG or WebP, under 2 MB each). The first image is the main one shown on the card.</div>
         </div>
       </div>
-      <label style="margin-top:10px">…or paste an image URL</label>
-      <input id="fImg" placeholder="https://..." oninput="previewFromUrl(this.value)">
+      <div class="img-thumbs" id="imgThumbs"></div>
+      <label style="margin-top:10px">…or add an image by URL</label>
+      <div style="display:flex;gap:8px">
+        <input id="fImg" placeholder="https://..." style="flex:1" oninput="this.style.borderColor=''">
+        <button type="button" class="oc-btn" style="flex:0 0 auto;min-width:0;padding:0 16px" onclick="addImageUrl()">Add</button>
+      </div>
 
       <button class="save-btn" id="saveBtn" onclick="saveProduct()">Save product</button>
     </div>
@@ -692,6 +785,11 @@
 <!-- ============ CUSTOMER TRACKING VIEW (public, via #track/<id>) ============ -->
 <div id="trackView">
   <div class="track-wrap" id="trackWrap"><!-- filled by renderTrack() --></div>
+</div>
+
+<!-- ============ PRODUCT DETAIL VIEW ============ -->
+<div id="productView">
+  <div class="pd-wrap" id="productBody"><!-- filled by renderProduct() --></div>
 </div>
 
 <!-- ============ CART DRAWER ============ -->
@@ -825,14 +923,27 @@ function saveStoreInfo(){
 
 /* ---------- Seed products ---------- */
 let products = [
-  {id:1,name:"Aurelle Gold Hoops",cat:"Jewelry",desc:"18k gold-plated everyday hoops.",price:2400,old:2900,stock:8,img:"https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&q=80"},
-  {id:2,name:"Pearl Drop Necklace",cat:"Jewelry",desc:"Freshwater pearl on a fine chain.",price:3600,old:0,stock:3,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80"},
-  {id:3,name:"Silk Rose Lipstick",cat:"Cosmetics",desc:"Satin-finish, nourishing rosewood.",price:1100,old:0,stock:0,img:"https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80"},
-  {id:4,name:"Velvet Glow Serum",cat:"Cosmetics",desc:"Vitamin-C brightening face serum.",price:1850,old:2200,stock:12,img:"https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80"},
-  {id:5,name:"Signature Gift Box",cat:"Gifts",desc:"Curated trio in a keepsake box.",price:2950,old:0,stock:6,img:"https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80"},
-  {id:6,name:"Minimalist Ring Set",cat:"Jewelry",desc:"Stackable trio, gold & rose tones.",price:1700,old:0,stock:4,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80"},
-  {id:7,name:"Botanical Candle",cat:"Gifts",desc:"Soy wax, fig & cedar, 40-hr burn.",price:1300,old:0,stock:0,img:"https://images.unsplash.com/photo-1602874801006-e26c4c5b5e8a?w=600&q=80"},
-  {id:8,name:"Petal Blush Compact",cat:"Cosmetics",desc:"Buildable powder blush, warm peach.",price:950,old:1200,stock:9,img:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80"},
+  {id:1,name:"Aurelle Gold Hoops",cat:"Jewelry",desc:"18k gold-plated everyday hoops. Lightweight, hypoallergenic, and designed to stay comfortable from morning meetings to evening dinners. A timeless piece that pairs with everything.",price:2400,old:2900,stock:8,
+    images:["https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&q=80","https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&q=80","https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80"],
+    reviews:[
+      {name:"Nusrat J.",rating:5,comment:"Absolutely love these! Lightweight and the gold tone is gorgeous.",at:"2026-05-20T10:00:00Z"},
+      {name:"Tania R.",rating:4,comment:"Beautiful hoops, exactly as pictured. Delivery was quick too.",at:"2026-05-28T14:30:00Z"}
+    ]},
+  {id:2,name:"Pearl Drop Necklace",cat:"Jewelry",desc:"Freshwater pearl on a fine chain. An elegant, understated piece for both everyday wear and special occasions.",price:3600,old:0,stock:3,
+    images:["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80"],reviews:[]},
+  {id:3,name:"Silk Rose Lipstick",cat:"Cosmetics",desc:"Satin-finish, nourishing rosewood shade that suits a wide range of skin tones.",price:1100,old:0,stock:0,
+    images:["https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80"],reviews:[]},
+  {id:4,name:"Velvet Glow Serum",cat:"Cosmetics",desc:"Vitamin-C brightening face serum. Lightweight, fast-absorbing, and formulated for daily use to even tone and add radiance.",price:1850,old:2200,stock:12,
+    images:["https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80","https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80"],
+    reviews:[{name:"Farhana K.",rating:5,comment:"My skin looks brighter after two weeks. Will repurchase!",at:"2026-06-01T09:00:00Z"}]},
+  {id:5,name:"Signature Gift Box",cat:"Gifts",desc:"Curated trio in a keepsake box. The perfect ready-to-gift set for birthdays, anniversaries, or just because.",price:2950,old:0,stock:6,
+    images:["https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80"],reviews:[]},
+  {id:6,name:"Minimalist Ring Set",cat:"Jewelry",desc:"Stackable trio in gold & rose tones. Mix, match, or wear all three.",price:1700,old:0,stock:4,
+    images:["https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80"],reviews:[]},
+  {id:7,name:"Botanical Candle",cat:"Gifts",desc:"Soy wax with fig & cedar fragrance, 40-hour burn time. Hand-poured in small batches.",price:1300,old:0,stock:0,
+    images:["https://images.unsplash.com/photo-1602874801006-e26c4c5b5e8a?w=600&q=80"],reviews:[]},
+  {id:8,name:"Petal Blush Compact",cat:"Cosmetics",desc:"Buildable powder blush in a warm peach tone. Silky, blendable, and long-wearing.",price:950,old:1200,stock:9,
+    images:["https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80"],reviews:[]},
 ];
 let nextId = 9;
 let cart = {};
@@ -845,6 +956,28 @@ let categories = ["Jewelry","Cosmetics","Gifts"];
 const money = n => "৳" + Number(n).toLocaleString("en-IN");
 const moneyTk = n => "Tk " + Number(n).toLocaleString("en-IN");   // PDF/Excel-safe (no broken glyph)
 const $ = id => document.getElementById(id);
+
+/* ---------- Product image & review helpers ---------- */
+// Normalised list of images for a product (supports legacy single `img`)
+function productImages(p){
+  if(Array.isArray(p.images) && p.images.length) return p.images;
+  if(p.img) return [p.img];
+  return ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80"];
+}
+function primaryImage(p){ return productImages(p)[0]; }
+// Average star rating (0 if none)
+function avgRating(p){
+  const r = p.reviews||[];
+  if(!r.length) return 0;
+  return r.reduce((s,x)=>s+x.rating,0)/r.length;
+}
+// Build star display for a rating value (supports halves visually via rounding)
+function starsHtml(rating, cls){
+  const full = Math.round(rating);
+  let s = "";
+  for(let i=1;i<=5;i++) s += `<span class="star ${i<=full?'on':''}">★</span>`;
+  return `<span class="stars ${cls||''}">${s}</span>`;
+}
 
 /* ---------- Render shop ---------- */
 function renderPills(){
@@ -887,18 +1020,24 @@ function renderShop(){
   }
   grid.innerHTML = list.map(p=>{
     const low = p.stock <= LOW_STOCK;
-    return `<article class="card">
+    const rc = (p.reviews||[]).length;
+    const av = avgRating(p);
+    const ratingHtml = rc ? `<div class="card-rating">${starsHtml(av,'sm')}<span class="card-rev-count">(${rc})</span></div>` : "";
+    const multi = productImages(p).length>1 ? `<span class="img-count">📷 ${productImages(p).length}</span>` : "";
+    return `<article class="card" onclick="openProduct(${p.id})">
       <div class="card-img">
         ${low?`<span class="tag low">Only ${p.stock} left</span>`:(p.old>p.price?`<span class="tag">Sale</span>`:"")}
-        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        ${multi}
+        <img src="${primaryImage(p)}" alt="${p.name}" loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-cat">${p.cat}</div>
         <div class="card-name">${p.name}</div>
+        ${ratingHtml}
         <div class="card-desc">${p.desc}</div>
         <div class="card-foot">
           <div class="price">${p.old>p.price?`<small>${money(p.old)}</small>`:""}${money(p.price)}</div>
-          <button class="add-btn" onclick="addToCart(${p.id})">Add</button>
+          <button class="add-btn" onclick="event.stopPropagation();addToCart(${p.id})">Add</button>
         </div>
       </div>
     </article>`;
@@ -911,8 +1050,9 @@ function addToCart(id){
   if(!p || p.stock<=0) return;
   const inCart = cart[id]?.qty || 0;
   if(inCart >= p.stock){ toast(`Only ${p.stock} of ${p.name} in stock`); return; }
-  cart[id] = {...p, qty: inCart+1};
+  cart[id] = {...p, img: primaryImage(p), qty: inCart+1};
   renderCart(); toast(`${p.name} added to bag`);
+  if($("productView").style.display==="block" && currentProductId===id) renderProduct();
 }
 function changeQty(id,d){
   if(!cart[id]) return;
@@ -1103,7 +1243,7 @@ function renderAdmin(){
       : p.stock<=LOW_STOCK?`<span class="stock-badge low">Low · ${p.stock}</span>`
       : `<span class="stock-badge ok">Live · ${p.stock}</span>`;
     return `<div class="ad-item">
-      <img src="${p.img}" alt="">
+      <img src="${primaryImage(p)}" alt="">
       <div class="meta"><h4>${p.name}</h4><small>${p.cat} · ${money(p.price)}</small><br>${badge}</div>
       <input class="ad-stock-in" type="number" value="${p.stock}" min="0"
         onchange="updateStock(${p.id}, this.value)" title="Update stock">
@@ -1123,16 +1263,23 @@ function updateStock(id,val){
 function saveProduct(){
   const name=$("fName").value.trim();
   if(!name){ toast("Product name is required"); return; }
-  const img = currentImg || $("fImg").value.trim() || "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80";
+  const images = formImages.length ? [...formImages]
+    : ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80"];
   const data = {
     name, cat:$("fCat").value, desc:$("fDesc").value.trim()||"—",
     price:+$("fPrice").value||0, old:+$("fOld").value||0,
     stock:parseInt($("fStock").value)||0,
-    img
+    images, img: images[0]   // keep img in sync as the primary, for any legacy reads
   };
   const eid = $("editId").value;
-  if(eid){ Object.assign(products.find(p=>p.id==eid), data); toast("Product updated"); }
-  else { products.push({id:nextId++,...data}); toast("Product added"); }
+  if(eid){
+    const prod = products.find(p=>p.id==eid);
+    Object.assign(prod, data);
+    toast("Product updated");
+  } else {
+    products.push({id:nextId++, reviews:[], ...data});
+    toast("Product added");
+  }
   clearForm(); renderAdmin(); renderShop();
 }
 function editProduct(id){
@@ -1140,8 +1287,9 @@ function editProduct(id){
   $("editId").value=p.id; $("fName").value=p.name;
   renderCatSelect(p.cat);
   $("fDesc").value=p.desc; $("fPrice").value=p.price; $("fOld").value=p.old||"";
-  $("fStock").value=p.stock; $("fImg").value = (p.img||"").startsWith("data:") ? "" : p.img;
-  setPreview(p.img); currentImg = p.img;
+  $("fStock").value=p.stock; $("fImg").value="";
+  formImages = [...productImages(p)];
+  renderFormThumbs();
   $("formTitle").textContent="Edit product"; $("saveBtn").textContent="Update product";
   window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -1153,13 +1301,12 @@ function clearForm(){
   ["editId","fName","fDesc","fPrice","fOld","fStock","fImg","fNewCat"].forEach(i=>$(i).value="");
   renderCatSelect(categories[0]);
   $("newCatRow").style.display="none";
-  setPreview(""); currentImg = "";
+  formImages = [];
+  renderFormThumbs();
   $("formTitle").textContent="Add a product"; $("saveBtn").textContent="Save product";
 }
 
 /* ---------- Category management ---------- */
-let currentImg = "";   // holds chosen image (URL or base64 data URI)
-
 // Populate the category <select>, plus an "+ Add new category" option
 function renderCatSelect(selected){
   const sel = $("fCat");
@@ -1243,29 +1390,49 @@ function deleteCategory(name){
   toast(`Category "${name}" removed`);
 }
 
-/* ---------- Image upload & preview ---------- */
-function setPreview(src){
-  const img=$("imgPreview"), ph=$("imgPlaceholder");
-  if(src){ img.src=src; img.style.display="block"; ph.style.display="none"; }
-  else { img.removeAttribute("src"); img.style.display="none"; ph.style.display="block"; }
+/* ---------- Image upload & multi-image gallery (admin) ---------- */
+let formImages = [];   // array of image URLs / data URIs for the product being edited
+
+function renderFormThumbs(){
+  const box = $("imgThumbs"); if(!box) return;
+  if(!formImages.length){ box.innerHTML=""; return; }
+  box.innerHTML = formImages.map((src,i)=>`
+    <div class="img-thumb ${i===0?'is-primary':''}">
+      <img src="${src}" alt="">
+      ${i===0?`<span class="img-thumb-badge">Main</span>`:`<button class="img-thumb-make" title="Make main image" onclick="makePrimaryImage(${i})">★</button>`}
+      <button class="img-thumb-del" title="Remove" onclick="removeFormImage(${i})">×</button>
+    </div>`).join("");
 }
-function previewFromUrl(url){
-  url=url.trim();
-  if(url){ currentImg=url; setPreview(url); }
-  else if(!currentImg.startsWith("data:")){ currentImg=""; setPreview(""); }
+function addFormImage(src){
+  if(formImages.length>=8){ toast("Up to 8 images per product"); return; }
+  formImages.push(src);
+  renderFormThumbs();
 }
-function handleImageFile(file){
-  if(!file) return;
-  if(!/^image\/(png|jpe?g|webp)$/.test(file.type)){ toast("Please choose a JPG, PNG or WebP image"); return; }
-  if(file.size > 2*1024*1024){ toast("Image is over 2 MB — please use a smaller file"); return; }
-  const reader = new FileReader();
-  reader.onload = e=>{
-    currentImg = e.target.result;   // base64 data URI — works offline, saved with the product
-    setPreview(currentImg);
-    $("fImg").value = "";           // clear the URL field; the upload takes precedence
-    toast("Image ready");
-  };
-  reader.readAsDataURL(file);
+function removeFormImage(i){ formImages.splice(i,1); renderFormThumbs(); }
+function makePrimaryImage(i){
+  const [img] = formImages.splice(i,1);
+  formImages.unshift(img);
+  renderFormThumbs();
+  toast("Set as main image");
+}
+function handleImageFiles(files){
+  if(!files || !files.length) return;
+  [...files].forEach(file=>{
+    if(!/^image\/(png|jpe?g|webp)$/.test(file.type)){ toast(`"${file.name}" isn't a supported image`); return; }
+    if(file.size > 2*1024*1024){ toast(`"${file.name}" is over 2 MB`); return; }
+    const reader = new FileReader();
+    reader.onload = e=>{ addFormImage(e.target.result); };
+    reader.readAsDataURL(file);
+  });
+  $("fFile").value = "";   // allow re-selecting the same file later
+}
+function addImageUrl(){
+  const el = $("fImg");
+  const url = (el.value||"").trim();
+  if(!url){ el.style.borderColor="#c0564f"; toast("Paste an image URL first"); return; }
+  if(!/^https?:\/\//i.test(url)){ el.style.borderColor="#c0564f"; toast("Enter a valid http(s) image URL"); return; }
+  addFormImage(url);
+  el.value="";
 }
 
 /* ---------- View switching + auth ---------- */
@@ -1275,6 +1442,7 @@ function hideAllViews(){
   $("ordersView").style.display="none";
   $("trackView").style.display="none";
   $("analyticsView").style.display="none";
+  $("productView").style.display="none";
 }
 function showShop(scroll){
   hideAllViews(); $("shopView").style.display="block";
@@ -1465,6 +1633,140 @@ function goHomeFromTrack(){
   currentTrackId=null;
   history.replaceState(null,"",location.pathname);
   showShop();
+}
+
+/* ---------- Product detail view ---------- */
+let currentProductId = null;
+let pdGalleryIndex = 0;
+let pdReviewStars = 0;   // stars selected in the review form
+
+function openProduct(id){
+  const p = products.find(x=>x.id===id); if(!p) return;
+  currentProductId = id;
+  pdGalleryIndex = 0;
+  pdReviewStars = 0;
+  hideAllViews();
+  $("productView").style.display="block";
+  closeCart(); closeMenu();
+  window.scrollTo(0,0);
+  renderProduct();
+}
+
+function renderProduct(){
+  const p = products.find(x=>x.id===currentProductId);
+  const body = $("productBody");
+  if(!p){ body.innerHTML = `<p style="text-align:center;padding:60px">Product not found. <a onclick="showShop()" style="color:var(--gold-deep);cursor:pointer">Back to shop</a></p>`; return; }
+  const imgs = productImages(p);
+  if(pdGalleryIndex>=imgs.length) pdGalleryIndex=0;
+  const reviews = p.reviews||[];
+  const av = avgRating(p);
+  const onSale = p.old>p.price;
+  const inCart = cart[p.id]?.qty || 0;
+  const soldOut = p.stock<=0;
+
+  const thumbs = imgs.length>1 ? `<div class="pd-thumbs">${imgs.map((src,i)=>
+    `<button class="pd-thumb ${i===pdGalleryIndex?'active':''}" onclick="pdSetImage(${i})"><img src="${src}" alt=""></button>`).join("")}</div>` : "";
+
+  const reviewList = reviews.length ? reviews.slice().reverse().map(r=>`
+    <div class="pd-review">
+      <div class="pd-review-top">
+        <span class="pd-review-name">${escapeHtml(r.name)}</span>
+        ${starsHtml(r.rating,'sm')}
+      </div>
+      ${r.comment?`<p class="pd-review-text">${escapeHtml(r.comment)}</p>`:""}
+      ${r.at?`<div class="pd-review-date">${fmtTime(r.at)}</div>`:""}
+    </div>`).join("") : `<p class="pd-no-reviews">No reviews yet — be the first to share your thoughts.</p>`;
+
+  body.innerHTML = `
+    <button class="pd-back" onclick="showShop()">← Back to shop</button>
+    <div class="pd-grid">
+      <div class="pd-gallery">
+        <div class="pd-main-img">
+          ${onSale?`<span class="tag">Sale</span>`:""}
+          <img src="${imgs[pdGalleryIndex]}" alt="${p.name}" id="pdMainImg">
+        </div>
+        ${thumbs}
+      </div>
+      <div class="pd-info">
+        <div class="pd-cat">${p.cat}</div>
+        <h1 class="pd-name">${p.name}</h1>
+        <div class="pd-rating-row">
+          ${starsHtml(av)} <span class="pd-rating-num">${av?av.toFixed(1):"—"}</span>
+          <span class="pd-rev-link">${reviews.length} review${reviews.length!==1?'s':''}</span>
+        </div>
+        <div class="pd-price">${onSale?`<small>${money(p.old)}</small>`:""}${money(p.price)}</div>
+        <p class="pd-desc">${escapeHtml(p.desc)}</p>
+        <div class="pd-stock ${soldOut?'out':(p.stock<=LOW_STOCK?'low':'ok')}">
+          ${soldOut?"Currently sold out":(p.stock<=LOW_STOCK?`Only ${p.stock} left in stock`:"In stock")}
+        </div>
+        <div class="pd-actions">
+          <button class="pd-add ${soldOut?'disabled':''}" ${soldOut?'disabled':`onclick="addToCart(${p.id})"`}>
+            ${soldOut?"Sold out":"Add to bag"}
+          </button>
+          ${inCart?`<span class="pd-incart">${inCart} in your bag</span>`:""}
+        </div>
+        <div class="pd-meta">Cash on delivery · We confirm every order with a quick call</div>
+      </div>
+    </div>
+
+    <div class="pd-reviews">
+      <h2 class="pd-sec-title">Reviews ${reviews.length?`<span>(${reviews.length})</span>`:""}</h2>
+      <div class="pd-review-summary">
+        <div class="pd-avg">
+          <div class="pd-avg-num">${av?av.toFixed(1):"—"}</div>
+          ${starsHtml(av)}
+          <div class="pd-avg-count">${reviews.length} review${reviews.length!==1?'s':''}</div>
+        </div>
+      </div>
+      <div class="pd-review-list">${reviewList}</div>
+
+      <div class="pd-review-form">
+        <h3>Write a review</h3>
+        <label>Your rating</label>
+        <div class="pd-star-input" id="pdStarInput">
+          ${[1,2,3,4,5].map(i=>`<span class="star-pick" data-v="${i}" onclick="pdPickStar(${i})" onmouseover="pdHoverStar(${i})" onmouseout="pdHoverStar(0)">★</span>`).join("")}
+        </div>
+        <label>Your name</label>
+        <input id="pdRevName" placeholder="e.g. Nadia R." oninput="this.style.borderColor=''">
+        <label>Your review</label>
+        <textarea id="pdRevText" rows="3" placeholder="Share what you liked about the product…" oninput="this.style.borderColor=''"></textarea>
+        <button class="pd-submit" onclick="submitReview()">Submit review</button>
+      </div>
+    </div>`;
+  pdRenderStarInput();
+}
+
+function pdSetImage(i){ pdGalleryIndex=i; renderProduct(); }
+function pdPickStar(v){ pdReviewStars=v; pdRenderStarInput(); }
+function pdHoverStar(v){ pdRenderStarInput(v); }
+function pdRenderStarInput(hover){
+  const box = $("pdStarInput"); if(!box) return;
+  const active = hover || pdReviewStars;
+  box.querySelectorAll(".star-pick").forEach(s=>{
+    s.classList.toggle("on", +s.dataset.v <= active);
+  });
+}
+
+function submitReview(){
+  const p = products.find(x=>x.id===currentProductId); if(!p) return;
+  const nameEl = $("pdRevName"), textEl = $("pdRevText");
+  const name = (nameEl.value||"").trim();
+  const comment = (textEl.value||"").trim();
+  if(pdReviewStars<1){ toast("Please pick a star rating"); return; }
+  if(name.length<2){ toast("Please enter your name"); nameEl.style.borderColor="#c0564f"; nameEl.focus(); return; }
+  if(!p.reviews) p.reviews=[];
+  p.reviews.push({ name, rating:pdReviewStars, comment, at:new Date().toISOString() });
+  pdReviewStars=0;
+  renderProduct();
+  renderShop();   // update the card rating badge
+  toast("Thank you — your review was posted!");
+  // scroll back to the reviews after re-render
+  setTimeout(()=>{ document.querySelector(".pd-reviews")?.scrollIntoView({behavior:"smooth"}); }, 60);
+}
+
+// Small HTML escaper for user-entered review text / names
+function escapeHtml(str){
+  return String(str||"").replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
 /* Restore the stock that an order had reserved (used on cancel / return). */
